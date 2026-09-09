@@ -1,0 +1,27 @@
+{
+  "name": "lld-practice-platform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "seed": "cd server && npm run seed",
+    "test": "jest --runInBand --forceExit",
+    "test:unit": "jest --testPathPattern='tests/unit' --runInBand --forceExit",
+    "test:integration": "jest --testPathPattern='tests/integration' --runInBand --forceExit"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "testTimeout": 30000,
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    }
+  }
+}
